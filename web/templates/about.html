@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block 'content' %}
+<section id="nosotros">
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-lg-6 order-lg-1 order-1 p-5">
+        <h2 class=" nosotros fw-bold me-5">
+          Sobre Nosotros
+        </h2>
+        <p class=" nosotrosp parrafo-nosotros text-dark mt-4">
+          En OnlyFlans, llevamos más de 20 años siendo líderes en el mercado de los flanes y la repostería. Como empresa
+          familiar, hemos trabajado arduamente y con dedicación para ofrecer productos de la más alta calidad. Nuestro
+          compromiso con la excelencia nos ha permitido crecer y consolidarnos en el corazón de Providencia, Santiago.
+        </p>
+
+        <p class="nosotrosp">La historia de OnlyFlans es una historia de esfuerzo, pasión y amor por la repostería. Desde nuestros
+          inicios,
+          hemos puesto especial atención en cada detalle, estudiando y perfeccionando nuestras recetas para brindarte
+          siempre lo mejor. </p>
+
+        <p class="nosotrosp">Visítanos en nuestra tienda en Providencia, Santiago, y descubre la magia de nuestros flanes y más
+          delicias.</p>
+        <p class="nosotrosp">Si tienes alguna consulta, no dudes en contactarnos al teléfono +569 1234 5678. </p>
+
+        <h5>¡Te esperamos en OnlyFlans, donde cada dulce es una obra de arte!</h5>
+
+        <a href="{% url 'contacto' %}" class="btn btn-info text-light" role="button">Contactanos</a>
+      </div>
+      <div class="col-lg-6 order-lg-2 order-2">
+        <!-- Imagen grande a la izquierda -->
+        <img src="{% static 'img/imgtarjetas.png' %}" class="img-fluid" alt="Imagen grande"
+          style="width: 80%; height: 80%; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

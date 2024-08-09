@@ -1,0 +1,291 @@
+.form-container {
+    background-color: #f8f9fa;
+    
+}
+
+.info-container {
+    background-color: #f8f9fa;
+    
+}
+
+.info-container h4 {
+    margin-bottom: 20px;
+}
+
+.info-container p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-container i {
+    margin-right: 10px;
+}
+
+.background-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 60px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+
+  }
+
+  .content h1 {
+    font-size: 5.5rem;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 5.7rem;
+  }
+
+  .parrafo-nosotros {
+    font-size: 2.2rem;
+  }
+
+  .tit1 {
+    font-size: 3.5rem;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  .newsletter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;    
+    background-color: #84b6f4;
+  }
+
+  .newsletter-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter-card h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .newsletter-card .form-control {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .newsletter-card .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .nav-link.btn-custom {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: white;       
+    background-color:#0dcaf0;        
+    border-radius: 5px;        
+    border: 1px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-link.btn-custom:hover,
+.nav-link.btn-custom:focus {
+    background-color: #17a2b8;        
+    text-decoration: none;
+    
+}
+
+.form-container {
+    background-color: #f8f9fa;
+    
+}
+
+.info-container {
+    background-color: #f8f9fa;
+    
+}
+
+.info-container h4 {
+    margin-bottom: 20px;
+}
+
+.info-container p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-container i {
+    margin-right: 10px;
+}
+
+body {
+    background-color: #f8f9fa;
+  }
+
+  .card {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  .btn-primary {
+    background-color: #0dcaf0;
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+  }
+
+  .alert {
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    border-radius: 5px;
+  }
+
+  body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.background-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 60px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+
+  }
+
+  .content h1 {
+    font-size: 5.5rem;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 5.7rem;
+  }
+
+  .parrafo-nosotros {
+    font-size: 2.2rem;
+  }
+
+  .tit1 {
+    font-size: 3.5rem;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  h2.login {
+    font-size: 2.4rem;
+  }
+
+  h2.logout{
+    font-size: 2.4rem;
+  }
+
+  h2.nosotros{
+    font-size: 3.4rem;
+  }
+
+  p.nosotrosp {
+    font-size: 1.1rem;
+  }
+
+  h2.indexnosotros {
+    font-size: 2.4rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text {
+    flex-grow: 1;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  display: none; 
+  z-index: 1000; 
+}
+
+h2.titiregister{
+  font-size: 1.9rem;
+}

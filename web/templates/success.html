@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .card {
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+
+    .btn-primary {
+        background-color: #0dcaf0;
+        border-color: #0dcaf0;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+    }
+
+    .alert {
+        margin-bottom: 1rem;
+    }
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="col-12 col-md-6 offset-0 offset-md-3 mt-4 mb-4 p-4 rounded shadow text-center">
+        <h3 class="mb-4">
+            Gracias por contactarte con Onlyflans, pronto responderemos tu consulta.
+        </h3>
+        <a href="{% url 'indice' %}" class="btn btn-info btn-lg text-light">
+            Volver al inicio
+        </a>
+    </div>
+</div>
+{% endblock %}

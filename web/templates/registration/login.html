@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+
+
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card p-5 shadow-lg w-100" style="max-width: 400px;">
+    <h2 class=" login mb-4 text-center">Aun no te has registrado</h2>
+    <p>No te pierdas de descubrir nuevos y excluivos sabores !!!</p>
+      {% if form.errors %}
+          <div class="alert alert-danger">
+              Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.
+          </div>
+      {% endif %}
+
+      {% if next %}
+          {% if user.is_authenticated %}
+              <div class="alert alert-warning">
+                  Su cuenta no tiene acceso a esta página. Para continuar, inicie sesión con una cuenta que tenga acceso.
+              </div>
+          {% else %}
+              <div class="alert alert-info">
+                  Por favor inicie sesión para ver esta página.
+              </div>
+          {% endif %}
+      {% endif %}
+
+      <form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          <div class="mb-3">
+              <label for="id_username" class="form-label">{{ form.username.label }}</label>
+              {{ form.username }}
+          </div>
+          <div class="mb-3">
+              <label for="id_password" class="form-label">{{ form.password.label }}</label>
+              {{ form.password }}
+          </div>
+          <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+          </div>
+          <input type="hidden" name="next" value="{{ next }}">
+      </form>
+      <div class="text-center mt-3">
+            <a href="{% url 'register' %}">¿No tienes una cuenta? Regístrate aquí</a>
+        </div>
+  </div>
+</div>
+{% endblock %}
+
+

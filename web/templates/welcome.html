@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block 'content' %}
+
+<section id="principal">
+  <div class="container-fluid background-section" style="background-image: url('{% static 'img/principal.jpg' %}');">
+    <div class="col-12 col-md-10 text-start container-fluid content">
+      <h1 class="fw-bold text-dark">Bienvenido <br> a Onlyflansn<br><h1 style="color: #ff0000;">Premium </h1></h1>
+      <p class="text-dark">Hola!! <span class="fw-bold">{{ user.get_username }}</span></p>
+      <p class="text-dark">Aquí encontrarás los mejores flanes, con una seleccion exclusiva <br>
+        para nuestros clientes mas exigentes  </p>
+      <div class="mb-5">        
+        <a href="#tarjetascompleta" class="btn btn-info text-light" role="button">VER FLANES</a>
+      </div>
+    </div>  
+  </div>
+</section>
+
+<section id="tarjetascompleta">
+  <div class="  container text-center mt-5 mb-5">
+    <h1 class="tit1 fw-bold">Nuestros Flanes Premium</h1>
+  </div>
+  <div class="container">
+    <div class="row mt-4 mb-5">
+      {% for flan in private_flans %}
+      <div class="col-6 col-md-3 mb-3 mt-3">
+        <div class="card mb-4 h-100">
+          <img src="{{ flan.imagen_url }}" class="card-img-top" alt="{{ flan.nombre }}"
+            style="width: 300px; height: 300px; object-fit: cover;">
+          <div class="card-body mb-3 mt-3">
+            <h5 class="card-title">
+              {{ flan.nombre }}
+            </h5>
+            <p class="card-text flex-grow-1">
+              {{ flan.descripcion }}
+            </p>
+            <div>
+              <i class="fa-solid fa-dollar-sign"></i> <span style="color: #0dcaf0">{{ flan.precio }}</span></i> 
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

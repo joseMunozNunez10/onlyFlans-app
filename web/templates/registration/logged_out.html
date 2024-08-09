@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-5 shadow-lg">
+        <div class="text-center">
+            <h2 class="logout mb-4">Te extrañamos!!</h2>
+            <p class="mb-4">Has cerrado sesión correctamente <br>
+                Regersa pronto! tus flanes te esperan.</p>
+
+            <a href="{% url 'login' %}" class="btn btn-primary"> Iniciar sesión</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

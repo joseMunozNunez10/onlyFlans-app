@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+
+
+<div class="container">
+    <div class="row mt-4 mb-4 text-center">
+        <div class="col-12">
+            <h3>Contáctanos</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6 mt-4 mt-md-0 p-4 rounded shadow info-container">
+            <h4>Información de Contacto</h4>
+            <p>
+                <i class="fas fa-phone-alt"></i> Teléfono: (+569) 1234-5678
+            </p>
+            <p>
+                <i class="fas fa-map-marker-alt"></i> Dirección: Providencia 123, Santiago
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i> Correo: ventas@onlyflans.com
+            </p>
+            <p class="mt-5" style="font: 1.3em sans-serif; font-style: italic;">
+                Mantente conectado con nosotros a través de nuestros canales de comunicación                                
+            </p>
+            <p class="mt-5" style="font: 1.2em sans-serif; font-style: italic;">
+                ¡No olvides crear tu usuario para disfrutar de nuestros flanes premium!
+            </p>
+            <a href="{% url 'login' %}" class="btn btn-info text-light" role="button">Iniciar Sesion.</a>
+            <div class="map-container mt-4">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.329581556334!2d-70.6201961847992!3d-33.43465658077957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5e342d19b51%3A0x2e03a674fa865f76!2sProvidencia%2C%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1625670247802!5m2!1ses!2scl"
+                    width="100%"
+                    height="250"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 p-4 rounded shadow form-container pe-1">
+            <form action="/contacto" method="POST">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+
+                <div class="mb-3">
+                    <label for="{{ form.name.id_for_label }}" class="form-label">
+                        {{ form.name.label_tag }}
+                    </label>
+                    <div>
+                        {{ form.name }}
+                    </div>
+                    <div class="text-danger">
+                        {{ form.name.errors }}
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.email.id_for_label }}" class="form-label">
+                        {{ form.email.label_tag }}
+                    </label>
+                    <div>
+                        {{ form.email }}
+                    </div>
+                    <div class="text-danger">
+                        {{ form.email.errors }}
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="{{ form.message.id_for_label }}" class="form-label">
+                        {{ form.message.label_tag }}
+                    </label>
+                    <div>
+                        {{ form.message }}
+                    </div>
+                    <div class="text-danger">
+                        {{ form.message.errors }}
+                    </div>
+                </div>
+                <div class="text-start">
+                    <input type="submit" value="Enviar" class="btn btn-info text-light">
+                </div>
+            </form>
+        </div>
+
+       
+    </div>
+</div>
+{% endblock %}

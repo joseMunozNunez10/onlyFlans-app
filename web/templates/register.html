@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load static%}
+
+{% block 'content' %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-5 shadow-lg w-100" style="max-width: 400px;">
+        <h2 class=" titiregister text-center mb-4 ">Regístrate en Onlyflans</h2>
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_username" class="form-label">Nombre de Usuario</label>
+                <br>{{ form.username }}
+            </div>
+            <div class="mb-3">
+                <label for="id_email" class="form-label">Tu Email</label>
+                <br>{{ form.email }}
+            </div>
+            <div class="mb-3">
+                <label for="id_password1" class="form-label " >Contraseña</label>
+                <br>{{ form.password1 }}
+            </div>
+            <div class="mb-3">
+                <label for="id_password2" class="form-label">Confirmar Contraseña</label>
+                <br>{{ form.password2 }}
+            </div>
+            <div class="d-grid">
+                <input type="submit" class="btn btn-primary "> <span class="text-center mt-2 fw-bold">Te esperamos registrate ya!!</span></input>
+            </div>
+        </form>
+    </div>
+</div>    
+{% endblock %}
